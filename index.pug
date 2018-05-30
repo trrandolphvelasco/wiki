@@ -1,0 +1,26 @@
+extends ./layout/_admin.pug
+
+block content
+  
+  include ./includes/_aside.pug
+  
+  .admin-wrap
+    .container.is-fluid
+      .field.has-addons
+        .control.is-expanded
+          input.input.is-default.is-medium.is-rounded(type="text", placeholder="Customer Name, Email, Login Name, Account ID...")
+        //- control
+        .control
+          a.button.is-danger.is-medium.is-rounded
+            i.fas.fa-search
+          //- a
+        //- control
+      //- field
+      br
+      
+    //- container
+  //- section
+
+block scripts
+  script.
+    
