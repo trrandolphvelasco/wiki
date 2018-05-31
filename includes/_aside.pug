@@ -1,58 +1,16 @@
 aside.menu.--admin(v-bind:class="[{'visible': isVisible}, {'mobile': isMobile}]")
-  .admin-logo.is-hidden-touch
-    img(src='assets/images/logo-piq.png', alt='PIQ Strata')
+  .admin-logo.is-hidden-touch(data-brand="ToolTwist", data-service="Wiki")
+    img(src='assets/images/logo.png', alt='ToolTwist Wiki')
   //- admin-logo
   .menu-wrap
     p.menu-label
-      | General
+      | Menu
     //- p
     ul.menu-list
       li
-        a.is-active(href='dashboard.html') Dashboard
-      //- li
-      li
-        a My Properties
-      //- li     
-      li
-        a Contact
-      //- li
-    //- ul
-    p.menu-label
-      | Accounts
-    //- p
-    ul.menu-list
-      li
-        a Strata
-        |
-        ul
-          li
-            a Due Notices
-          //- li
-          |         
-          li
-            a Receipts
-          //- li
-          |         
-          li
-            a Meetings
-          //- li
-          li
-            a Insurance
-          //- li
-          |         
-          li
-            a Contacts
-          //- li
-        //- ul
-      //- li
-      li
-        a General
-        |       
-        ul
-          li
-            a Documents
-          //- li
-        //- ul
+        a.is-active(href='dashboard.html')
+          i.far.fa-envelope-open
+          | Email Templates
       //- li
     //- ul
   //- menu-wrap

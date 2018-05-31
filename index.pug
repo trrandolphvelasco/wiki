@@ -1,26 +1,107 @@
 extends ./layout/_admin.pug
 
 block content
+  -
+    var proj = {
+      "folder": [
+        'af',
+        'bc',
+        'cl',
+        'dp',
+        'fe',
+        'fmc',
+        'gs',
+        'hr',
+        'mhp',
+        'nu',
+        'pd',
+        'pi',
+        'tq',
+        'wc',
+        'hp',
+        'am',
+        'wmu',
+        'ins',
+        'mb',
+        'cx',
+        'td'
+      ],
+      "title": [
+        'AFTRS',
+        'British Council',
+        'Core Logic',
+        'Drinkpoint',
+        'Forms Express',
+        'FitMyCar',
+        'Studylane/GSP',
+        'Health RFID',
+        'M Health Pharma',
+        'Nutra Organics',
+        'Pundit',
+        'PIQ',
+        'Tafe Queensland',
+        'Whitecliffe',
+        'Happi',
+        'Amgrow',
+        'World Maritime University',
+        'INSTEP',
+        'My Bonsai Diary',
+        'ConvX',
+        'TechDirect'
+      ],
+      "outage": [
+        't_devops',
+        't_regression',
+        't_runsheet_2',
+        't_runsheet',
+        't_smoke_pre_release',
+        't_smoke'
+      ]
+    }
   
   include ./includes/_aside.pug
   
   .admin-wrap
     .container.is-fluid
-      .field.has-addons
-        .control.is-expanded
-          input.input.is-default.is-medium.is-rounded(type="text", placeholder="Customer Name, Email, Login Name, Account ID...")
-        //- control
-        .control
-          a.button.is-danger.is-medium.is-rounded
-            i.fas.fa-search
-          //- a
-        //- control
-      //- field
-      br
+      
+      .content
+        h3.title.is-3 Email Templates
+        
+        table.table
+          thead
+            tr
+              th.text-center PROJECT
+              th.text-center Devops
+              th.text-center Regression
+              th.text-center Runsheet 2
+              th.text-center Runsheet
+              th.text-center Smoke Pre-release
+              th.text-center Smoke
+            //-tr
+          //-thead
+          
+          tbody
+            each val, index in proj.title
+              tr
+                td= val
+                each value in proj.outage
+                  td.text-center
+                    a.text-success(href="//ttstatic.github.io/outage/"+proj.folder[index]+"/"+value+".html", target="_blank", class="livepreview", data-position="bottom")
+                      i.fa.fa-download
+                    //-a
+                  //-td
+              //-tr
+            //-each
+          //-tbody
+        //-table
+        
+      //- content
       
     //- container
   //- section
 
 block scripts
   script.
-    
+    $(document).ready(function() { 
+      $(".livepreview").livePreview();
+    });
