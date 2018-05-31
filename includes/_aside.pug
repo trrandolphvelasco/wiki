@@ -1,6 +1,8 @@
 aside.menu.--admin(v-bind:class="[{'visible': isVisible}, {'mobile': isMobile}]")
-  .admin-logo.is-hidden-touch(data-brand="ToolTwist", data-service="Wiki")
-    img(src='assets/images/logo.png', alt='ToolTwist Wiki')
+  .admin-logo.is-hidden-touch
+    .logo(data-brand="ToolTwist", data-service="Wiki")
+      img(src='assets/images/logo.png', alt='ToolTwist Wiki')
+    //- logo
   //- admin-logo
   .menu-wrap
     p.menu-label
@@ -8,9 +10,21 @@ aside.menu.--admin(v-bind:class="[{'visible': isVisible}, {'mobile': isMobile}]"
     //- p
     ul.menu-list
       li
-        a.is-active(href='dashboard.html')
+        a(href='dashboard.html')
           i.far.fa-envelope-open
           | Email Templates
+        //- a
+      //- li
+    //- ul
+    p.menu-label
+      | Other
+    //- p
+    ul.menu-list
+      li
+        a(href='//ttstatic.github.io/themepalette/', target='_blank')
+          i.fas.fa-palette
+          | Theme Palette
+        //- a
       //- li
     //- ul
   //- menu-wrap

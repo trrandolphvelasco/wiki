@@ -2,52 +2,29 @@ extends ./layout/_admin.pug
 
 block content
   -
-    var proj = {
-      "folder": [
-        'af',
-        'bc',
-        'cl',
-        'dp',
-        'fe',
-        'fmc',
-        'gs',
-        'hr',
-        'mhp',
-        'nu',
-        'pd',
-        'pi',
-        'tq',
-        'wc',
-        'hp',
-        'am',
-        'wmu',
-        'ins',
-        'mb',
-        'cx',
-        'td'
-      ],
-      "title": [
-        'AFTRS',
-        'British Council',
-        'Core Logic',
-        'Drinkpoint',
-        'Forms Express',
-        'FitMyCar',
-        'Studylane/GSP',
-        'Health RFID',
-        'M Health Pharma',
-        'Nutra Organics',
-        'Pundit',
-        'PIQ',
-        'Tafe Queensland',
-        'Whitecliffe',
-        'Happi',
-        'Amgrow',
-        'World Maritime University',
-        'INSTEP',
-        'My Bonsai Diary',
-        'ConvX',
-        'TechDirect'
+    var project = {
+      "data": [
+        { 'name': 'af', 'title': 'AFTRS' },
+        { 'name': 'bc', 'title': 'British Council' },
+        { 'name': 'cl', 'title': 'Core Logic' },
+        { 'name': 'dp', 'title': 'Drinkpoint' },
+        { 'name': 'fe', 'title': 'Forms Express' },
+        { 'name': 'fmc', 'title': 'FitMyCar' },
+        { 'name': 'gs', 'title': 'Studylane/GSP' },
+        { 'name': 'hr', 'title': 'Health RFID' },
+        { 'name': 'mhp', 'title': 'M Health Pharma' },
+        { 'name': 'nu', 'title': 'Nutra Organics' },
+        { 'name': 'pd', 'title': 'Pundit' },
+        { 'name': 'pi', 'title': 'PIQ' },
+        { 'name': 'tq', 'title': 'Tafe Queensland' },
+        { 'name': 'wc', 'title': 'Whitecliffe' },
+        { 'name': 'hp', 'title': 'Happi' },
+        { 'name': 'am', 'title': 'Amgrow' },
+        { 'name': 'wmu', 'title': 'World Maritime University' },
+        { 'name': 'ins', 'title': 'INSTEP' },
+        { 'name': 'mb', 'title': 'My Bonsai Diary' },
+        { 'name': 'cx', 'title': 'ConvX' },
+        { 'name': 'td', 'title': 'TechDirect' }
       ],
       "outage": [
         't_devops',
@@ -81,13 +58,13 @@ block content
           //-thead
           
           tbody
-            each val, index in proj.title
+            each val, index in project.data
               tr
-                td= val
-                each value in proj.outage
+                td= project.data[index].title
+                each val in project.outage
                   td.text-center
-                    a.text-success(href="//ttstatic.github.io/outage/"+proj.folder[index]+"/"+value+".html", target="_blank", class="livepreview", data-position="bottom")
-                      i.fa.fa-download
+                    a.text-success(href="//ttstatic.github.io/outage/"+project.data[index].name+"/"+val+".html", target="_blank", class="livepreview", data-position="bottom")
+                      i.fas.fa-download
                     //-a
                   //-td
               //-tr
