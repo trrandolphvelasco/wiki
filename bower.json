@@ -17,7 +17,7 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "bulma": "^0.6.2",
-    "jquery-live-preview": "git@github.com:alanphoon/jquery-live-preview.git"
+    "jquery-live-preview": "https://github.com/alanphoon/jquery-live-preview.git"
   },
   "overrides": {
     "bulma": {
