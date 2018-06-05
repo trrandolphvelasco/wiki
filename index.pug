@@ -63,7 +63,7 @@ block content
                 td= project.data[index].title
                 each val in project.outage
                   td.text-center
-                    a.text-success(href="//ttstatic.github.io/outage/"+project.data[index].name+"/"+val+".html", target="_blank", class="livepreview", data-position="bottom")
+                    a.text-success(href="//outage.netlify.com/"+project.data[index].name+"/"+val+".html", target="_blank", class="livepreview", data-position="bottom")
                       i.fas.fa-download
                     //-a
                   //-td
