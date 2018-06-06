@@ -47,13 +47,13 @@ block content
         table.table
           thead
             tr
-              th.text-center PROJECT
-              th.text-center Devops
-              th.text-center Regression
-              th.text-center Runsheet 2
-              th.text-center Runsheet
-              th.text-center Smoke Pre-release
-              th.text-center Smoke
+              th PROJECT
+              th.has-text-centered Devops
+              th.has-text-centered Regression
+              th.has-text-centered Runsheet 2
+              th.has-text-centered Runsheet
+              th.has-text-centered Smoke Pre-release
+              th.has-text-centered Smoke
             //-tr
           //-thead
           
@@ -62,8 +62,8 @@ block content
               tr
                 td= project.data[index].title
                 each val in project.outage
-                  td.text-center
-                    a.text-success(href="//outage.netlify.com/"+project.data[index].name+"/"+val+".html", target="_blank", class="livepreview", data-position="bottom")
+                  td.has-text-centered
+                    a(href="//outage.netlify.com/"+project.data[index].name+"/"+val+".html", target="_blank", class="livepreview", data-position="bottom")
                       i.fas.fa-download
                     //-a
                   //-td
