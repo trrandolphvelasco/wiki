@@ -1,4 +1,4 @@
-# Adding a new project in the Email Tempalte list
+# Adding a new project in the Wiki site's Email Template list
 ###### Edit `index.pug` and new data in the `- project` variable
 ```pug
 { 'name': 'npj', 'title': 'New Project Title' }
