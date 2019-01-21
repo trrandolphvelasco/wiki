@@ -7,7 +7,7 @@
 1. Create a [Netlify](https://www.netlify.com/) account
 2. Click on the `New site from Git` button
 3. Under `Continuous Deployment` select `Github` button. A popup will appear and you have to authorize your Github account and select a repository. You can select all or just select a specific repository.
-4. In the list of repositories, select `/outage`
+4. In the list of repositories, select `/wiki`
 5. Under `Build command` put `gulp main`.
 6. Under `Publish directory` put `public`.
 7. Click `Deploy Site` button.
