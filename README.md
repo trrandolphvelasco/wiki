@@ -3,7 +3,7 @@
 ```pug
 { 'name': 'npj', 'title': 'New Project Title' }
 ```
-# Serve Email/Outage notifications in Netlify
+# Serve Wiki site in Netlify
 1. Create a [Netlify](https://www.netlify.com/) account
 2. Click on the `New site from Git` button
 3. Under `Continuous Deployment` select `Github` button. A popup will appear and you have to authorize your Github account and select a repository. You can select all or just select a specific repository.
