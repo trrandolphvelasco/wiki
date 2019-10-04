@@ -27,7 +27,8 @@ block content
         { 'name': 'td', 'title': 'TechDirect' },
         { 'name': 'piq', 'title': 'PropertyIQ' },
         { 'name': 'adv', 'title': 'Advisor-E' },
-        { 'name': 'adlf', 'title': 'ADL Forms' }
+        { 'name': 'adlf', 'title': 'ADL Forms' },
+        { 'name': 'adli', 'title': 'ADL Inspect' }
       ],
       "outage": [
         't_devops',
@@ -38,15 +39,15 @@ block content
         't_smoke'
       ]
     }
-  
+
   include ./includes/_aside.pug
-  
+
   .admin-wrap
     .container.is-fluid
-      
+
       .content
         h3.title.is-3 Email Templates
-        
+
         table.table
           thead
             tr
@@ -59,7 +60,7 @@ block content
               th.has-text-centered Smoke
             //-tr
           //-thead
-          
+
           tbody
             each val, index in project.data
               tr
@@ -75,14 +76,14 @@ block content
             // each
           //-tbody
         //-table
-        
+
       //- content
-      
+
     //- container
   //- section
 
 block scripts
   script.
-    $(document).ready(function() { 
+    $(document).ready(function() {
       $(".livepreview").livePreview();
     });
